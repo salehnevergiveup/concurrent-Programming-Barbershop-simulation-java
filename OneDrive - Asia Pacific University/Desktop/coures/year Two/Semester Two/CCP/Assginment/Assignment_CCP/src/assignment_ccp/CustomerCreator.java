@@ -23,18 +23,19 @@ public class CustomerCreator extends Thread {
     @Override
     public void run() {
         try {
+            //create on 20 cutomers
             for (int i = 1; i <= 20; i++) {
                 Customer cus = new Customer(i, q);
                 cus.start();
 
                 try {//
-                    TimeUnit.SECONDS.sleep(new Random().nextInt(4));
+                    //sleep from 0 - 2 seconds max
+                    TimeUnit.SECONDS.sleep(new Random().nextInt(3));
                 } catch (InterruptedException ex) {
                     Logger.getLogger(CustomerCreator.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.SECONDS.sleep(new Random().nextInt(3));
             System.out.println("🚪 We are closing now. Thank you for choosing us today! 💇‍♀️💆‍♂️💅");
 
 

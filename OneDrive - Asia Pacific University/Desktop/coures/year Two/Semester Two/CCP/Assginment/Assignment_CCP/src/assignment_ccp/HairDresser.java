@@ -55,7 +55,7 @@ public class HairDresser extends Thread {
         }
 
     }
-
+    // geting the customes and for cosing the salon 
     public void GetCutomer() throws Exception {
 
         synchronized (q.waittingChair) {
@@ -77,6 +77,7 @@ public class HairDresser extends Thread {
                     if(leaving == 2) System.out.println(closingMessage);
                     return;
                 }
+                Thread.sleep(3000);
             }
 
             synchronized (eq) {
@@ -95,7 +96,7 @@ public class HairDresser extends Thread {
         }
     }
 
-    public boolean getScissorsCombs() {
+    public boolean getScissorsCombs() throws InterruptedException {
         int flag = new Random().nextInt(2);
         String CorS = flag == 1 ? "C" : "S";
         int counter = 0;
@@ -114,7 +115,7 @@ public class HairDresser extends Thread {
                 if (this.ScissorAndComb.size() > 0 && returend == false) {
                     System.out.println("Barber 💈 " + name + " take " + ScissorAndComb.get(0).name);
                 }
-
+                TimeUnit.SECONDS.sleep(3);
                 synchronized (eq) {
                     if (CorS == "S" && this.ScissorAndComb.size() == 0) {
                         return false;
@@ -130,7 +131,9 @@ public class HairDresser extends Thread {
                             }
                         }
                     }
-                    //get the comb but can't get the scissors 
+                    
+                  
+                    //return the comb if can't aquire the scisores
                     if (ScissorAndComb.size() == 1 && ScissorAndComb.get(0).type.equalsIgnoreCase("C")) {
                         if (returend == false) {
                             System.out.println("Barber 💈 " + name + " returned " + ScissorAndComb.get(0).name + " 🌟🌟🌟");
@@ -146,6 +149,7 @@ public class HairDresser extends Thread {
                     }
                 }
                 if (ScissorAndComb.size() == 1 && ScissorAndComb.get(0).type.equalsIgnoreCase("S")) {
+                    CorS = "C";
                     counter++;
                 }
             }
@@ -157,10 +161,11 @@ public class HairDresser extends Thread {
     }
 
     public void cutHair() throws InterruptedException {
-        int duration = randomNumber(3, 5);
+        //
+        int duration = new Random().nextInt(4)+3;
         System.out.println("Customer " + cus.id + " Picked " + duration * 10 + "$ 💰");
         System.out.println("Barber 💈 " + name + " Start cutting the Hair ✂️ of the Customer: " + cus.id + " - " + 0 + "% ✂️");
-
+        //show the progress of the cutting hair
         for (int i = 1; i <= 4; i++) {
             TimeUnit.SECONDS.sleep(duration / 4);
             System.out.println("Barber 💈 " + name + " cutting the Hair of the Customer: " + cus.id + " - " + i * 25 + "% ✂️");
@@ -171,7 +176,7 @@ public class HairDresser extends Thread {
         Salon.AddIncome(duration * 10, this);
     }
 
-    public void finished() {
+    public void finished() throws InterruptedException {
         synchronized (eq) {
             synchronized (q.barberChair) {
                 eq.add(ScissorAndComb.get(0));
@@ -180,22 +185,15 @@ public class HairDresser extends Thread {
                 ScissorAndComb.remove(0);
                 ScissorAndComb.remove(0);
                 index = -1;
-                System.out.println("Customer " + cus.id + " Left the Salon 🚪");
                 q.barberChair.remove(cus);
+                System.out.println("Customer " + cus.id + " Left the Salon 🚪");
                 cus = null;
             }
         }
     }
 
-    private int randomNumber(int start, int end) {
-        int number = -1;
-        while (number < start || number > end) {
-            number = new Random().nextInt(end + 1);
-        }
-        return number;
-    }
-
-    public synchronized boolean closing(String s) {
+    
+    public static synchronized boolean closing(String s) {
         if (s.equalsIgnoreCase("f")) {
             opeaing = false;
         }

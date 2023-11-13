@@ -15,48 +15,33 @@ import java.util.logging.Logger;
 public class Customer extends Thread {
 
     int id;
-    // indecats if the customer assgined to the barber or not 
-    boolean status = false;
-    String[] typeArray = {"paciente", "impaciente"};
     int type;
     WaittingQueue q;
 
     public Customer(int id, WaittingQueue q) {
         this.id = id;
         this.q = q;
-        type = new Random().nextInt(2);
+        type = new Random().nextInt(3)+1;
     }
 
     @Override
     public void run() {
-        add();
+        //Add themselves to the wattingChair or the queue
+         q.addCustomer(this);
         if (type == 1) {
             try {
          
-                Timer();
+             Timer();
             } catch (Exception ex) {
                 Logger.getLogger(Customer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
 
-    public void add() {
-        q.addCustomer(this);
-    }
-
+    //cutomer will be board and live the salon if watting in the queue 
     public void Timer() throws Exception {
-        Thread.sleep(1000 * new Random().nextInt(3)+1);
-        
-       
-        synchronized (q.queue) {
-            if (q.queue.contains(this)) {
-                remove();
-            }
-        }
-    }
-
-    public void remove() {
-        q.removeCustomer(this);
+        Thread.sleep(1000 * new Random().nextInt(5)+1);
+         q.removeCustomer(this, true);
     }
 
 }

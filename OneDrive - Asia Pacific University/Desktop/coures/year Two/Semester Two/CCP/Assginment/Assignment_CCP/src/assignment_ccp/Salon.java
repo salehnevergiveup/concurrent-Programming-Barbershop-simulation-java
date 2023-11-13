@@ -15,9 +15,10 @@ public class Salon extends  Thread{
     public static String  name;
     WaittingQueue q =  new WaittingQueue();
     ArrayList<Equipments> eq = new ArrayList<Equipments>();
-    HairDresser HD1 = new HairDresser("saleh", q, eq);
-    HairDresser HD2 = new HairDresser("Ahmed", q, eq);
-    HairDresser HD3 = new HairDresser("Ail", q, eq);
+    //creating the Hairdressers
+    HairDresser HD1 = new HairDresser("1", q, eq);
+    HairDresser HD2 = new HairDresser("2", q, eq);
+    HairDresser HD3 = new HairDresser("3", q, eq);
     CustomerCreator cc = new CustomerCreator(q);
     
     public Salon() { 
@@ -28,11 +29,14 @@ public class Salon extends  Thread{
     }
     @Override
     public void run() {  
+        //starting the cutomerCreator and the Hairdressers
         cc.start();
         HD1.start();
         HD2.start();
         HD3.start();
     }
+    
+    //countting the total income
     public static synchronized void AddIncome(double income, HairDresser hairdresser) {
         TotalDailyInCome += income;
         System.out.println(hairdresser.name + " 💈: added " + income + "$ to the shop 💰💲💰");

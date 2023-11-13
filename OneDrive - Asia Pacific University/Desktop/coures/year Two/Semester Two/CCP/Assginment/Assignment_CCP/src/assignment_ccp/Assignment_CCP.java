@@ -15,16 +15,12 @@ public class Assignment_CCP {
     /**
      * @param args the command line arguments
      */
-    public static boolean timer() throws InterruptedException {
-        TimeUnit.MINUTES.sleep(5);
-        return true;
-    }
 
     public static void main(String[] args) throws InterruptedException {
-        // TODO code application logic here
+        // Start the salon from here
             Salon s = new Salon();
             s.start();
-            s.join();
+         
     }
 
 }
