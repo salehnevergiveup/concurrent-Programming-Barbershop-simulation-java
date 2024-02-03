@@ -161,7 +161,7 @@ FFPROBE_PATH="C:\\ProgramData\\chocolatey\\bin\\ffprobe.exe"
 ```
 
 > [!NOTE]
->- If you encounter MySQL-related issues during schema migration using XAMPP, find the `mysql.exe` file in >`C:\xampp\mysql\bin`. Add its path to the system environment variables:
+>- If you encounter MySQL-related issues during schema migration using XAMPP, find the `mysql.exe` file in `C:\xampp\mysql\bin`. Add its path to the system environment variables:
 >   - Search for "Edit the system environment variables" using the Windows search bar.
 >   - Access the environment variables, double-click on `Path`.
 >   - Click `New` and paste the `C:\xampp\mysql\bin` path (your path may vary).
