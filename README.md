@@ -29,7 +29,7 @@ Update your environment variable based on your needs.
 
 -   Copy and paste `.env.ci` file and change file name to `.env`.
 -   Change `DB_HOST=127.0.0.1`,
--   Change `DB_DATABASE=database_name`.
+-   Change `DB_DATABASE=database_name example pixalink_explore`.
 -   Remove _~~password~~_ `DB_PASSWORD=`.
 
 ## Installing Dependencies
@@ -53,7 +53,8 @@ Installing Composer and Npm dependencies
 ```shell
  composer config http-basic.spark.laravel.com pixalinkdev@gmail.com <Key>
 ```
-Nte
+Note: replace the <key> with the **Credential Key** from **CCK*
+
 3. Run the **composer install**
 
 ```shell
@@ -70,7 +71,11 @@ Nte
 ### Stripe API Key
 
 1. Go to https://dashboard.stripe.com/test/apikeys
-2. Copy the **Publishable key** and **Secret key** and paste it to **.env** file
+   
+```diff
+#Note in red
+```
+- Copy the **Publishable key** and **Secret key** and paste it to **.env** file
 
 ```shell
 STRIPE_KEY=
@@ -119,6 +124,10 @@ STRIPE_PLANS_WHATSAPP_GREEN_3_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_6_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_YEARLY_ID=
 ```
+```diff
+##Notes in red
+```
+- **[STRIPE_PLANS_DEFAULT_YEARLY_ID] represents the Pixalink Explore product."**
 
 ### Setup FFMPEG
 
@@ -154,6 +163,15 @@ FFPROBE_PATH="C:\\ProgramData\\chocolatey\\bin\\ffprobe.exe"
  php artisan storage:link
 ```
 
+```diff
+##Notes in red
+```
+- If you encounter MySQL-related issues during schema migration using XAMPP, find the `mysql.exe` file in `C:\xampp\mysql\bin`. Add its path to the system environment variables:
+   - Search for "Edit the system environment variables" using the Windows search bar.
+   - Access the environment variables, double-click on `Path`.
+   - Click `New` and paste the `C:\xampp\mysql\bin` path (your path may vary).
+   - Click `OK` to close all windows.
+
 ### Installing NPM dependencies and run in dev
 
 ```shell
@@ -169,6 +187,10 @@ Follow the two file paths below to set up the virtual hosts.
 c:/Windows/System32/drivers/etc/hosts
 c:/xampp/apache/conf/extra/vhosts
 ```
+```diff
+#Note in red
+```
+-httpd-vhosts.conf is Vhost
 
 1. Open the vhosts and add the code below at the bottom
 
@@ -184,10 +206,20 @@ c:/xampp/apache/conf/extra/vhosts
 ```shell
 127.0.0.1       explore.pixalink.io.test
 ```
-
 3. If system say unable to save the file, you can download https://www.sublimetext.com/ and run the app with
    administrator and open the file again to edit.
 4. Restart the Apache in XAMPP Control Panel.
+
+or 
+
+3. Copy the hosts file to another directory.
+4. Convert the copied file to a text file (e.g., `host.txt`).
+5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
+6. Save the changes.
+7. Copy the modified `host.txt` file.
+8. Remove the original hosts file from `C:/Windows/System32/drivers/etc/`.
+9. Paste your `host.txt` to `C:/Windows/System32/drivers/etc/`.
+10. Remove the `.txt` extension from the file name.
 
 ### Set up SSL / HTTPS
 
@@ -240,6 +272,25 @@ Email Address []: **
 11. Win+R and type **certmgr.msc** and enter
 12. Go to **Trusted Root Certification Authorities** and **Certificates** and find the **localhost** and **your virtual
     host site Example: explore.pixalink.io.test** and you have complete install
+    
+=======================================
+```diff
+##Notes in red
+```
+If the certificate is not found in `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
+1. Double Click on the **server.crt** file located in **xampp/apache/conf/ssl.crt**.
+2. Click on "Install Certificates."
+3. Click "Next," then select "Place all certificates in the following store."
+4. Click "Browse."
+5. Choose [Trusted Root Certificate Authorities], then click "OK."
+6. Win+R and type **certmgr.msc** and press Enter.
+7. Navigate to **Trusted Root Certification Authorities > Certificates.**
+8. Find entries for both **localhost** and your virtual host site (e.g., explore.pixalink.io.test).
+9. Confirm the certificate installation is complete.
+=======================================
+
+After making sure that certificate is in the `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
+
 13. Open the folder below
 
 ```shell
