@@ -72,10 +72,7 @@ Note: replace the <key> with the **Credential Key** from **CCK*
 
 1. Go to https://dashboard.stripe.com/test/apikeys
 
-<span style="color:red">Notes</span>
-```diff
 #Notes in red
-```
 - Copy the **Publishable key** and **Secret key** and paste it to **.env** file
 
 ```shell
@@ -125,10 +122,7 @@ STRIPE_PLANS_WHATSAPP_GREEN_3_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_6_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_YEARLY_ID=
 ```
-$${\color{red}##Notes}$$
-```diff
-##Notes in red
-```
+##Notes
 - **[STRIPE_PLANS_DEFAULT_YEARLY_ID] represents the Pixalink Explore product."**
 
 ### Setup FFMPEG
@@ -165,9 +159,7 @@ FFPROBE_PATH="C:\\ProgramData\\chocolatey\\bin\\ffprobe.exe"
  php artisan storage:link
 ```
 
-```diff
-##Notes in red
-```
+##Notes
 - If you encounter MySQL-related issues during schema migration using XAMPP, find the `mysql.exe` file in `C:\xampp\mysql\bin`. Add its path to the system environment variables:
    - Search for "Edit the system environment variables" using the Windows search bar.
    - Access the environment variables, double-click on `Path`.
@@ -276,9 +268,7 @@ Email Address []: **
     host site Example: explore.pixalink.io.test** and you have complete install
     
 =======================================
-```diff
-##Notes in red
-```
+##Notes 
 If the certificate is not found in `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
 1. Double Click on the **server.crt** file located in **xampp/apache/conf/ssl.crt**.
 2. Click on "Install Certificates."
