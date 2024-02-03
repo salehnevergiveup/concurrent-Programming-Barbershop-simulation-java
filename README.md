@@ -4,14 +4,15 @@ Introduction and steps to set up Pixalink environment locally.
 
 ## Getting Started
 
-### Requirement
+> [!IMPORTANT]
+>Requirement
 
--   [Xampp](https://www.apachefriends.org/) (Windows)
--   [MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) (if you dont use xampp)
--   [Valet](https://laravel.com/docs/9.x/valet) (Mac OS)
--   [Composer](https://getcomposer.org/doc/00-intro.md)
--   [PHP8](https://www.php.net/downloads.php#v8.0.11)
--   [NPM](https://www.npmjs.com/get-npm)
+>-   [Xampp](https://www.apachefriends.org/) (Windows)
+>-   [MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) (if you dont use xampp)
+>-   [Valet](https://laravel.com/docs/9.x/valet) (Mac OS)
+>-   [Composer](https://getcomposer.org/doc/00-intro.md)
+>-   [PHP8](https://www.php.net/downloads.php#v8.0.11)
+>-   [NPM](https://www.npmjs.com/get-npm)
 
 ## Setting up
 
@@ -203,15 +204,16 @@ c:/xampp/apache/conf/extra/vhosts
    administrator and open the file again to edit.
 4. Restart the Apache in XAMPP Control Panel.
 
-**Alternative Method (if you prefer not to download the application)**
+> [!TIP]
+>**Alternative Method (if you prefer not to download the application)**
 
-3. Copy the hosts file to another directory.
-4. open the file using Notepad.
-5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
-6. Save the changes.
-7. Copy the modified `host` file.
-8. Remove the original hosts file from `C:/Windows/System32/drivers/etc/`.
-9. Paste your `host` to `C:/Windows/System32/drivers/etc/.
+>3. Copy the hosts file to another directory.
+>4. open the file using Notepad.
+>5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
+>6. Save the changes.
+>7. Copy the modified `host` file.
+>8. Remove the original hosts file from `C:/Windows/System32/drivers/etc/`.
+>9. Paste your `host` to `C:/Windows/System32/drivers/etc/.
 
 ### Set up SSL / HTTPS
 
