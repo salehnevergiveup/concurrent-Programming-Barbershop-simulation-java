@@ -11,7 +11,7 @@ Introduction and steps to set up Pixalink environment locally.
 >-   [Valet](https://laravel.com/docs/9.x/valet) (Mac OS)
 >-   [Composer](https://getcomposer.org/doc/00-intro.md)
 >-   [PHP8](https://www.php.net/downloads.php#v8.0.11)
->-   [NPM](https://www.npmjs.com/get-npm)
+-   [NPM](https://www.npmjs.com/get-npm)
 
 ## Setting up
 
@@ -204,7 +204,7 @@ c:/xampp/apache/conf/extra/vhosts
 4. Restart the Apache in XAMPP Control Panel.
 
 > [!TIP]
->**Alternative Method (if you prefer not to download the application)**
+>Alternative Method (if you prefer not to download the application):
 >3. Copy the hosts file to another directory.
 >4. open the file using Notepad.
 >5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
