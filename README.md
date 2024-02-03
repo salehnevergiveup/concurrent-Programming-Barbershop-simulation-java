@@ -53,7 +53,8 @@ Installing Composer and Npm dependencies
 ```shell
  composer config http-basic.spark.laravel.com pixalinkdev@gmail.com <Key>
 ```
-Note: replace the <key> with the **Credential Key** from **CCK*
+>[!NOTE]
+>replace the <key> with the **Credential Key** from **CCK*
 
 3. Run the **composer install**
 
@@ -72,8 +73,8 @@ Note: replace the <key> with the **Credential Key** from **CCK*
 
 1. Go to https://dashboard.stripe.com/test/apikeys
 
-**Notes**
-- Copy the **Publishable key** and **Secret key** and paste it to **.env** file
+> [!NOTE]
+> Copy the **Publishable key** and **Secret key** and paste it to **.env** file
 
 ```shell
 STRIPE_KEY=
@@ -122,8 +123,8 @@ STRIPE_PLANS_WHATSAPP_GREEN_3_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_6_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_YEARLY_ID=
 ```
-**Notes**
-- **[STRIPE_PLANS_DEFAULT_YEARLY_ID] represents the Pixalink Explore product."**
+> [!NOTE]
+> **[STRIPE_PLANS_DEFAULT_YEARLY_ID]** represents the Pixalink Explore product.
 
 ### Setup FFMPEG
 
@@ -159,12 +160,12 @@ FFPROBE_PATH="C:\\ProgramData\\chocolatey\\bin\\ffprobe.exe"
  php artisan storage:link
 ```
 
-**Notes**
-- If you encounter MySQL-related issues during schema migration using XAMPP, find the `mysql.exe` file in `C:\xampp\mysql\bin`. Add its path to the system environment variables:
-   - Search for "Edit the system environment variables" using the Windows search bar.
-   - Access the environment variables, double-click on `Path`.
-   - Click `New` and paste the `C:\xampp\mysql\bin` path (your path may vary).
-   - Click `OK` to close all windows.
+> [!NOTE]
+>- If you encounter MySQL-related issues during schema migration using XAMPP, find the `mysql.exe` file in >`C:\xampp\mysql\bin`. Add its path to the system environment variables:
+>   - Search for "Edit the system environment variables" using the Windows search bar.
+>   - Access the environment variables, double-click on `Path`.
+>   - Click `New` and paste the `C:\xampp\mysql\bin` path (your path may vary).
+>   - Click `OK` to close all windows.
 
 ### Installing NPM dependencies and run in dev
 
@@ -181,8 +182,8 @@ Follow the two file paths below to set up the virtual hosts.
 c:/Windows/System32/drivers/etc/hosts
 c:/xampp/apache/conf/extra/vhosts
 ```
-#Note 
-Vhost is the httpd-vhosts.conf file, which serves as the Virtual Host configuration file.
+> [!NOTE]
+>Vhost is the httpd-vhosts.conf file, which serves as the Virtual Host configuration file.
 
 1. Open the vhosts and add the code below at the bottom
 
