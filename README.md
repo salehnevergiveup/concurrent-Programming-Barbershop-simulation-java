@@ -71,9 +71,10 @@ Note: replace the <key> with the **Credential Key** from **CCK*
 ### Stripe API Key
 
 1. Go to https://dashboard.stripe.com/test/apikeys
-   
+
+##$${\color{red}Notes!!!}$$ 
 ```diff
-#Note in red
+#Notes in red
 ```
 - Copy the **Publishable key** and **Secret key** and paste it to **.env** file
 
