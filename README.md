@@ -122,7 +122,7 @@ STRIPE_PLANS_WHATSAPP_GREEN_3_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_6_MONTH_ID=
 STRIPE_PLANS_WHATSAPP_GREEN_YEARLY_ID=
 ```
-##Notes
+**Notes**
 - **[STRIPE_PLANS_DEFAULT_YEARLY_ID] represents the Pixalink Explore product."**
 
 ### Setup FFMPEG
@@ -159,7 +159,7 @@ FFPROBE_PATH="C:\\ProgramData\\chocolatey\\bin\\ffprobe.exe"
  php artisan storage:link
 ```
 
-##Notes
+**Notes**
 - If you encounter MySQL-related issues during schema migration using XAMPP, find the `mysql.exe` file in `C:\xampp\mysql\bin`. Add its path to the system environment variables:
    - Search for "Edit the system environment variables" using the Windows search bar.
    - Access the environment variables, double-click on `Path`.
@@ -202,7 +202,7 @@ Vhost is the httpd-vhosts.conf file, which serves as the Virtual Host configurat
    administrator and open the file again to edit.
 4. Restart the Apache in XAMPP Control Panel.
 
-Alternative Method (if you prefer not to download the application)
+**Alternative Method (if you prefer not to download the application)**
 
 3. Copy the hosts file to another directory.
 4. open the file using Notepad.
@@ -266,7 +266,8 @@ Email Address []: **
     
 =======================================
 
-##Notes 
+**Notes**
+ 
 If the certificate is not found in `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
 1. Double Click on the **server.crt** file located in **xampp/apache/conf/ssl.crt**.
 2. Click on "Install Certificates."
@@ -280,7 +281,7 @@ If the certificate is not found in `certmgr.msc > Trusted Root Certification Aut
     
 =======================================
 
-After making sure that certificate is in the `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
+After making sure that certificate is in the `Trusted Root Certification Authorities > Certificates`:
 
 13. Open the folder below
 
