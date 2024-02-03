@@ -72,7 +72,7 @@ Note: replace the <key> with the **Credential Key** from **CCK*
 
 1. Go to https://dashboard.stripe.com/test/apikeys
 
-#Notes in red
+#Notes 
 - Copy the **Publishable key** and **Secret key** and paste it to **.env** file
 
 ```shell
@@ -181,10 +181,8 @@ Follow the two file paths below to set up the virtual hosts.
 c:/Windows/System32/drivers/etc/hosts
 c:/xampp/apache/conf/extra/vhosts
 ```
-```diff
-#Note in red
-```
--httpd-vhosts.conf is Vhost
+#Note 
+Vhost is the httpd-vhosts.conf file, which serves as the Virtual Host configuration file.
 
 1. Open the vhosts and add the code below at the bottom
 
@@ -203,7 +201,8 @@ c:/xampp/apache/conf/extra/vhosts
 3. If system say unable to save the file, you can download https://www.sublimetext.com/ and run the app with
    administrator and open the file again to edit.
 4. Restart the Apache in XAMPP Control Panel.
-or 
+
+## Alternative Method (if you prefer not to download the application)
 3. Copy the hosts file to another directory.
 4. open the file using Notepad.
 5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
