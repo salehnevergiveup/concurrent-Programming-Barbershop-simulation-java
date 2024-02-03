@@ -72,7 +72,7 @@ Note: replace the <key> with the **Credential Key** from **CCK*
 
 1. Go to https://dashboard.stripe.com/test/apikeys
 
-##$${\color{red}Notes!!!}$$ 
+$${\color{red}Notes}$$ 
 ```diff
 #Notes in red
 ```
