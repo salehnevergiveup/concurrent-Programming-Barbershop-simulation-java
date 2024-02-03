@@ -203,17 +203,14 @@ c:/xampp/apache/conf/extra/vhosts
 3. If system say unable to save the file, you can download https://www.sublimetext.com/ and run the app with
    administrator and open the file again to edit.
 4. Restart the Apache in XAMPP Control Panel.
-
 or 
-
 3. Copy the hosts file to another directory.
-4. Convert the copied file to a text file (e.g., `host.txt`).
+4. open the file using Notepad.
 5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
 6. Save the changes.
-7. Copy the modified `host.txt` file.
+7. Copy the modified `host` file.
 8. Remove the original hosts file from `C:/Windows/System32/drivers/etc/`.
-9. Paste your `host.txt` to `C:/Windows/System32/drivers/etc/`.
-10. Remove the `.txt` extension from the file name.
+9. Paste your `host` to `C:/Windows/System32/drivers/etc/.
 
 ### Set up SSL / HTTPS
 
