@@ -352,4 +352,4 @@ MAIL_PASSWORD=<password>
   memory_limit=512M
 ```
 
-## Setup Complete ! Try to open your pixalink !
+## Setup Complete :+1: ! Try to open your pixalink :shipit:
