@@ -6,7 +6,6 @@ Introduction and steps to set up Pixalink environment locally.
 
 > [!IMPORTANT]
 >Requirement
-
 >-   [Xampp](https://www.apachefriends.org/) (Windows)
 >-   [MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) (if you dont use xampp)
 >-   [Valet](https://laravel.com/docs/9.x/valet) (Mac OS)
@@ -206,7 +205,6 @@ c:/xampp/apache/conf/extra/vhosts
 
 > [!TIP]
 >**Alternative Method (if you prefer not to download the application)**
-
 >3. Copy the hosts file to another directory.
 >4. open the file using Notepad.
 >5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
