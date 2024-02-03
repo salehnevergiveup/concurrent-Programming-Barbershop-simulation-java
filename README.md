@@ -202,7 +202,8 @@ Vhost is the httpd-vhosts.conf file, which serves as the Virtual Host configurat
    administrator and open the file again to edit.
 4. Restart the Apache in XAMPP Control Panel.
 
-## Alternative Method (if you prefer not to download the application)
+Alternative Method (if you prefer not to download the application)
+
 3. Copy the hosts file to another directory.
 4. open the file using Notepad.
 5. Add the provided code: `127.0.0.1       explore.pixalink.io.test`.
@@ -264,6 +265,7 @@ Email Address []: **
     host site Example: explore.pixalink.io.test** and you have complete install
     
 =======================================
+
 ##Notes 
 If the certificate is not found in `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
 1. Double Click on the **server.crt** file located in **xampp/apache/conf/ssl.crt**.
@@ -275,6 +277,7 @@ If the certificate is not found in `certmgr.msc > Trusted Root Certification Aut
 7. Navigate to **Trusted Root Certification Authorities > Certificates.**
 8. Find entries for both **localhost** and your virtual host site (e.g., explore.pixalink.io.test).
 9. Confirm the certificate installation is complete.
+    
 =======================================
 
 After making sure that certificate is in the `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
