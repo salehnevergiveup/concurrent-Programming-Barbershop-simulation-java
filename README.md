@@ -264,20 +264,19 @@ Email Address []: **
 12. Go to **Trusted Root Certification Authorities** and **Certificates** and find the **localhost** and **your virtual
     host site Example: explore.pixalink.io.test** and you have complete install
     
-**Notes**
- 
-If the certificate is not found in `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
-1. Double Click on the **server.crt** file located in **xampp/apache/conf/ssl.crt**.
-2. Click on "Install Certificates."
-3. Click "Next," then select "Place all certificates in the following store."
-4. Click "Browse."
-5. Choose [Trusted Root Certificate Authorities], then click "OK."
-6. Win+R and type **certmgr.msc** and press Enter.
-7. Navigate to **Trusted Root Certification Authorities > Certificates.**
-8. Find entries for both **localhost** and your virtual host site (e.g., explore.pixalink.io.test).
-9. Confirm the certificate installation is complete.
+> [!NOTE]
+>If the certificate is not found in `certmgr.msc > Trusted Root Certification Authorities > Certificates`:
+>1. Double Click on the **server.crt** file located in **xampp/apache/conf/ssl.crt**.
+>2. Click on "Install Certificates."
+>3. Click "Next," then select "Place all certificates in the following store."
+>4. Click "Browse."
+>5. Choose [Trusted Root Certificate Authorities], then click "OK."
+>6. Win+R and type **certmgr.msc** and press Enter.
+>7. Navigate to **Trusted Root Certification Authorities > Certificates.**
+>8. Find entries for both **localhost** and your virtual host site (e.g., explore.pixalink.io.test).
+>9. Confirm the certificate installation is complete.
 
-After making sure that certificate is in the `Trusted Root Certification Authorities > Certificates`:
+After Confirm the certificate installation is complete.
 
 13. Open the folder below
 
